@@ -1,19 +1,22 @@
 * {
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
-    --border-color: #000;
-    --table-header-bg: #000;
-    --column-header-bg: #2e2e2e;
-    --light-text-color: #fff;
-    --dark-text-color: #000;
-    --cell-color: #ffffff;
+    --white: #F7F7F9;
+    --dark-blue: #2B2D42;
+    --light-gray: #c6c7ce;
+    --green-light: #73AB84;
 }
 
 body {
     margin: 0;
     padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--white);
+    color: var(--dark-blue);
 }
 
 table { 
@@ -23,17 +26,18 @@ table {
 }
 
 td, th {
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--dark-blue);
     padding: 5px 10px;
 }
 
 td {
-    background: var(--cell-color);
+    background: var(--white);
+    font-family: 'Inter', sans-serif;
 }
 
 th {
-    background: var(--table-header-bg);
-    color: var(--light-text-color);
+    background: var(--dark-blue);
+    color: var(--white);
 }
 
 main {
@@ -48,7 +52,8 @@ main {
 
 a {
     text-decoration: none;
-    color: var(--dark-text-color);
+    color: var(--dark-blue);
+    font-family: 'Inter', sans-serif;
 }
 
 section {
@@ -62,7 +67,7 @@ h4 {
 
 .total-number-container {
     width: 100%;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--dark-blue);
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -74,7 +79,7 @@ h4 {
 }
 
 .column-header th {
-    background: var(--column-header-bg);
+    background: var(--green-light);
 }
 
 .team-url {
@@ -83,12 +88,12 @@ h4 {
 }
 
 .team-url:hover {
-    background: var(--column-header-bg);
+    background: var(--green-light);
     transition: .2s;
 }
 
 .team-url:hover a {
-    color: var(--light-text-color);
+    color: var(--white);
     transition: .2s;
 }
 
@@ -102,6 +107,17 @@ h4 {
     justify-content: space-evenly   ;
     flex-wrap: wrap;
     gap: 20px;
-    border: 1px solid var(--border-color);
     width: 100%;
+}
+
+.city-values-container h3 {
+    color: var(--light-gray);
+    user-select: none;
+    transition: .2s .2s;
+}
+
+.city-values-container h3:hover {
+    transition: .2s;
+    transform: scale(1.2);
+    color: var(--dark-blue);
 }

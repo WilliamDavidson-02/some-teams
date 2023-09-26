@@ -1,7 +1,9 @@
+<!-- table head colspan count($teams) + 1 is $teams array plus teams column which it the key for each inner array. -->
+
 <table>
     <thead>
         <tr>
-            <th colspan="5">Teams</th>
+            <th class="teams-header" colspan="<?= count($teams) + 1; ?>">Teams</th>
         </tr>
     </thead>
     <tbody>
@@ -12,7 +14,7 @@
             <th>City</th>
             <th>Website</th>
         </tr>
-        <?php foreach ($teams as $key => $team): ?>
+        <?php foreach ($teams as $key => $team) : ?>
             <tr>
                 <td><?= $key; ?></td>
                 <td><?= $team['league'] ?></td>
