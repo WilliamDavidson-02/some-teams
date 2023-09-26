@@ -18,12 +18,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Team</td>
-                    <td>League</td>
-                    <td>Last championship</td>
-                    <td>City</td>
-                    <td>Website</td>
+                <tr class="column-header">
+                    <th>Team</th>
+                    <th>League</th>
+                    <th>Last championship</th>
+                    <th>City</th>
+                    <th>Website</th>
                 </tr>
                 <?php foreach ($teams as $key => $team): ?>
                     <tr>
@@ -31,7 +31,7 @@
                         <td><?= $team['league'] ?></td>
                         <td><?= $team['last-time-champions'] ?></td>
                         <td><?= $team['city'] ?></td>
-                        <td><?= $team['url'] ?></td>
+                        <td class="team-url"><a target="_blank" href="<?= $team['url'] ?>"><?= $key; ?></a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

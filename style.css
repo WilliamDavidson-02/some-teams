@@ -4,9 +4,11 @@
 
 :root {
     --border-color: #000;
-    --table-header: #000;
+    --table-header-bg: #000;
+    --column-header-bg: #2e2e2e;
     --light-text-color: #fff;
     --dark-text-color: #000;
+    --cell-color: #ffffff;
 }
 
 body {
@@ -24,8 +26,12 @@ td, th {
     padding: 5px 10px;
 }
 
+td {
+    background: var(--cell-color);
+}
+
 th {
-    background: var(--table-header);
+    background: var(--table-header-bg);
     color: var(--light-text-color);
 }
 
@@ -37,13 +43,41 @@ main {
     gap: 50px;
 }
 
+a {
+    text-decoration: none;
+    color: var(--dark-text-color);
+}
+
 .total-number-container {
     width: 100%;
     max-width: 300px;
     border: 1px solid var(--border-color);
-    border-radius: 5px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.column-header th {
+    background: var(--column-header-bg);
+}
+
+.team-url {
+    transition: .2s;
+    cursor: pointer;
+}
+
+.team-url:hover {
+    background: var(--column-header-bg);
+    transition: .2s;
+}
+
+.team-url:hover a {
+    color: var(--light-text-color);
+    transition: .2s;
+}
+
+.team-url a {
+    transition: .2s;
+    display: block;
 }
