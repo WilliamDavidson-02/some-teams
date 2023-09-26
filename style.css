@@ -68,6 +68,7 @@ h4 {
 .total-number-container {
     width: 100%;
     border: 1px solid var(--dark-blue);
+    margin-top: 20px;
     padding: 10px;
     display: flex;
     flex-direction: column;
