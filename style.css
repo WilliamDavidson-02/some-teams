@@ -19,6 +19,7 @@ body {
 table { 
     border-spacing: 0;
     border-collapse: collapse;
+    width: 100%;
 }
 
 td, th {
@@ -37,9 +38,11 @@ th {
 
 main {
     padding: 10px;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 50px;
 }
 
@@ -48,14 +51,26 @@ a {
     color: var(--dark-text-color);
 }
 
+section {
+    width: 100%;
+}
+
+h4 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+
 .total-number-container {
     width: 100%;
-    max-width: 300px;
     border: 1px solid var(--border-color);
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.table-section {
+    overflow-x: auto;
 }
 
 .column-header th {
@@ -80,4 +95,13 @@ a {
 .team-url a {
     transition: .2s;
     display: block;
+}
+
+.city-values-container {
+    display: flex;
+    justify-content: space-evenly   ;
+    flex-wrap: wrap;
+    gap: 20px;
+    border: 1px solid var(--border-color);
+    width: 100%;
 }
