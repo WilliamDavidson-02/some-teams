@@ -2,7 +2,48 @@
     box-sizing: border-box;
 }
 
+:root {
+    --border-color: #000;
+    --table-header: #000;
+    --light-text-color: #fff;
+    --dark-text-color: #000;
+}
+
 body {
     margin: 0;
     padding: 0;
+}
+
+table { 
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid var(--border-color);
+    padding: 5px 10px;
+}
+
+th {
+    background: var(--table-header);
+    color: var(--light-text-color);
+}
+
+main {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.total-number-container {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
